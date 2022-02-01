@@ -34,7 +34,7 @@ const Feed = () => {
         link: url,
         image: article.image
           ? `${hostName}${article.image}`
-          : `${postImagesPath}/${url?.split("/")?.at(-1)}.jpg`,
+          : `${postImagesPath}/${url?.split("/")?.slice(-1)}.jpg`,
         date: new Date(article.createdAt),
         description: article.description,
         content: article.summary,
