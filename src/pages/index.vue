@@ -71,7 +71,7 @@ export default Vue.extend({
             url: "https://www.facebook.com/groups/231206027294980",
             position: "Terminale A2",
             date: "2013-2016",
-          }
+          },
         ],
       } as ExperienceObject,
       cards: {
@@ -155,8 +155,10 @@ export default Vue.extend({
           </div>
 
           <p class="text-neutral-500">
-            Salut, je suis Salomon Dion, originaire de Côte d'Ivoire, et je suis un Data Engineer.
-            J'aide à la prise de décision et l'amélioration des performances des entreprises en développant des plateformes de données.
+            Salut, je suis Salomon Dion, originaire de Côte d'Ivoire, et je suis
+            un Data Engineer. J'aide à la prise de décision et l'amélioration
+            des performances des entreprises en développant des plateformes de
+            données.
           </p>
         </div>
 

@@ -15,7 +15,12 @@ export default Vue.extend({
         linux: [] as Post[],
         rest: [] as Post[],
       },
-      categories: ["Data Engineering", "Data Science & ML", "Astuces et conseils", "Général"],
+      categories: [
+        "Data Engineering",
+        "Data Science & ML",
+        "Astuces et conseils",
+        "Général",
+      ],
       selectedCategory: "Data Engineering",
     }
   },
@@ -217,7 +222,9 @@ export default Vue.extend({
               selectedCategory === text && 'bg-gray-100 dark:bg-neutral-800'
             "
             :title="
-              selectedCategory === text ? `Voir tous les articles dans ${text}` : ''
+              selectedCategory === text
+                ? `Voir tous les articles dans ${text}`
+                : ''
             "
             @click="
               selectedCategory !== text
@@ -295,7 +302,8 @@ export default Vue.extend({
             <li>Essayez d'utiliser des mots clés dans votre recherche.</li>
             <li>Essayez d'utiliser des tags.</li>
             <li>
-              Essayez de rechercher des mots qui se trouvent dans le titre ou la description de l'article.
+              Essayez de rechercher des mots qui se trouvent dans le titre ou la
+              description de l'article.
             </li>
           </ul>
         </div>

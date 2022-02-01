@@ -58,7 +58,8 @@ export default Vue.extend({
         // @ts-ignore-next-line
         title: this.errors[statusCode]?.title || "Inconnu",
         // @ts-ignore-next-line
-        description: this.errors[statusCode]?.description || "Aucune description.",
+        description:
+          this.errors[statusCode]?.description || "Aucune description.",
       }
     },
   },
@@ -83,7 +84,9 @@ export default Vue.extend({
         Quelque chose de grave est arrivé...
       </h1>
 
-      <p class="text-lg text-gray-700 dark:text-gray-300">Peut-être que ça aiderait :</p>
+      <p class="text-lg text-gray-700 dark:text-gray-300">
+        Peut-être que ça aiderait :
+      </p>
     </div>
 
     <div
@@ -119,7 +122,9 @@ export default Vue.extend({
     </div>
 
     <div class="flex flex-wrap space-x-2">
-      <button title="Cliquez pour revenir en arrière" @click="$router.back()">Retour en arrière</button>
+      <button title="Cliquez pour revenir en arrière" @click="$router.back()">
+        Retour en arrière
+      </button>
 
       <button title="Cliquez pour rafraîchir la page" @click="refresh">
         Rafraîchir la page

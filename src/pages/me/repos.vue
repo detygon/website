@@ -12,9 +12,7 @@ export default Vue.extend({
   },
   fetchOnServer: false,
   async fetch() {
-    const filter = [
-      "website"
-    ]
+    const filter = ["website"]
 
     const repos: Repository[] = (
       await this.$axios.get(

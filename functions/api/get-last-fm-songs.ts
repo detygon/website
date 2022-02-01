@@ -6,9 +6,9 @@ const username = "detygon"
 
 export async function onRequest() {
   if (!LASTFM_API_KEY) {
-    return {
-      statusCode: 401,
-    }
+    return new Response(null, {
+      status: 201,
+    })
   }
 
   try {
@@ -75,17 +75,23 @@ export async function onRequest() {
         recentTracks: recentTracks?.tracks?.map(mapTrack) || [],
         topTracks: topTracks?.tracks?.map(mapTrack) || [],
         topArtists: topArtists?.artists?.map(mapArtist) || [],
-      })
+      }),
+      {
+        headers: {
+          "Access-Control-Allow-Origin": origin,
+          "Access-Control-Allow-Headers": "Content-Type",
+          "Access-Control-Allow-Methods": "GET",
+        },
+      }
     )
   } catch (error: any) {
     console.log(error)
 
     return new Response(
       JSON.stringify({
-        error: true,
-        statusCode: error.statusCode || 500,
         message: error.message,
-      })
+      }),
+      { status: 500 }
     )
   }
 }

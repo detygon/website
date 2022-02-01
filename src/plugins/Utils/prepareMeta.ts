@@ -78,13 +78,14 @@ export default function prepareMeta(
     )
 
   const defaultKeywords = [
-    "technology",
-    "turkish",
-    "developer",
-    "portfolio",
-    "vue",
-    "nuxt",
-    "tailwindcss",
+    "technologie",
+    "data",
+    "sql",
+    "big data",
+    "data science",
+    "machine learning",
+    "data engineering",
+    "transformation digitale",
   ]
 
   if (keywords)

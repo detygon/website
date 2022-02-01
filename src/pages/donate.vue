@@ -55,17 +55,20 @@ export default Vue.extend({
   <div class="py-4">
     <div class="space-y-12 text-gray-500 sm:w-9/12 dark:text-neutral-600">
       <header class="space-y-2 my-12 px-4">
-        <h1 class="text-gray-700 text-4xl dark:text-neutral-300">Faire un don</h1>
+        <h1 class="text-gray-700 text-4xl dark:text-neutral-300">
+          Faire un don
+        </h1>
 
         <p>
-          Si vous aimez mes projets et/ou ce que je fais et que vous voulez contribuer,
-          me faire plaisir, vous pouvez me faire un don avec les informations de cette page !
-          Merci ♥
+          Si vous aimez mes projets et/ou ce que je fais et que vous voulez
+          contribuer, me faire plaisir, vous pouvez me faire un don avec les
+          informations de cette page ! Merci ♥
         </p>
 
         <p class="text-xs">
-          P.S. Utilisez le nom "<span class="underline">Dion Dety Gon Salomon</span>" comme nom
-          de vos transactions.
+          P.S. Utilisez le nom "<span class="underline"
+            >Dion Dety Gon Salomon</span
+          >" comme nom de vos transactions.
         </p>
       </header>
 
