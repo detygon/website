@@ -257,7 +257,7 @@ export default Vue.extend({
       </h1>
 
       <div
-        class="flex flex-col space-y-3 items-center justify-between overflow-x-hidden md:(space-y-0 space-x-3 flex-row)"
+        class="flex flex-col space-y-3 items-center justify-between overflow-x-hidden md:space-y-0 md:space-x-3 md:flex-row"
       >
         <div
           class="flex space-x-3 w-full py-2 items-center overflow-x-hidden md:space-x-5"
@@ -282,7 +282,7 @@ export default Vue.extend({
               }"
               :src="getImages.smallImage"
               alt="small image"
-              class="rounded-full bg-[#6c82cf] h-9 -right-2 -bottom-2 ring-4 ring-[#6c82cf] w-9 overflow-y-hidden absolute box-border dark:(bg-transparent ring-transparent) focus:outline-none"
+              class="rounded-full bg-[#6c82cf] h-9 -right-2 -bottom-2 ring-4 ring-[#6c82cf] w-9 overflow-y-hidden absolute box-border dark:bg-transparent dark:ring-transparent focus:outline-none"
             />
           </div>
 
@@ -312,7 +312,7 @@ export default Vue.extend({
             <SmartLink
               :href="button.url"
               :title="button.url"
-              class="border rounded-sm cursor-pointer border-white/40 text-sm py-2 px-4 transition-colors text-gray-300 truncate select-none md:(px-3 py-1) hover:(text-white border-white) focus:(bg-opacity-10 bg-white)"
+              class="border rounded-sm cursor-pointer border-white/40 text-sm py-2 px-4 transition-colors text-gray-300 truncate select-none md:px-3 md:py-1 hover:text-white hover:border-white focus:bg-opacity-10 focus:bg-white"
               blank
               >{{ button.label }}</SmartLink
             >

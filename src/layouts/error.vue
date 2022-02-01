@@ -87,7 +87,7 @@ export default Vue.extend({
     </div>
 
     <div
-      class="rounded space-y-4 bg-gray-200 p-4 items-center md:(flex space-y-0 space-x-4) dark:(bg-neutral-800 text-gray-200)"
+      class="rounded space-y-4 bg-gray-200 p-4 items-center md:flex md:space-y-0 md:space-x-4 dark:bg-neutral-800 dark:text-gray-200"
     >
       <div>
         <SmartImage
@@ -128,8 +128,8 @@ export default Vue.extend({
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style  scoped>
 button {
-  @apply rounded cursor-pointer bg-gray-200 py-2 px-4 transition-colors text-gray-900 select-none dark:(bg-neutral-800 text-gray-100 hover:bg-neutral-700) hover:bg-gray-300 focus:outline-none;
+  @apply rounded cursor-pointer bg-gray-200 py-2 px-4 transition-colors text-gray-900 select-none dark:bg-neutral-800 dark:text-gray-100 dark:hover:bg-neutral-700 hover:bg-gray-300 focus:outline-none;
 }
 </style>

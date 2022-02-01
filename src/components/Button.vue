@@ -68,7 +68,7 @@ export default Vue.extend({
     :class="{
       // Variants
       [variant === 'patreon'
-        ? 'bg-[#FF424D] bg-opacity-100 text-white hover:(bg-[#FF424D] bg-opacity-75)'
+        ? 'bg-[#FF424D] bg-opacity-100 text-white hover:bg-[#FF424D] hover:bg-opacity-75'
         : 'text-gray-700 dark:text-neutral-400']: true,
 
       // Tightness
@@ -87,7 +87,7 @@ export default Vue.extend({
       'flex items-center space-x-2': $slots.icon,
       'dark:hover:bg-neutral-800 hover:bg-gray-200':
         variant === 'primary' && elevated === false && disabled === false,
-      'bg-gray-200 hover:bg-gray-200/40 dark:(bg-neutral-800 hover:bg-neutral-800/40)':
+      'bg-gray-200 hover:bg-gray-200/40 dark:bg-neutral-800 dark:hover:bg-neutral-800/40':
         variant === 'primary' && elevated === true && disabled === false,
     }"
   >

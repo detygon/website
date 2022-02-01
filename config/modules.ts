@@ -15,7 +15,6 @@ const Modules: NuxtOptionsModule[] = [
   ["@nuxt/content", content],
   ["@nuxtjs/feed", feed],
   ["@nuxtjs/sitemap", sitemap],
-  ["@nuxtjs/firebase", firebase],
   ["nuxt-webfontloader", webfontloader],
 ]
 

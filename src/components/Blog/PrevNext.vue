@@ -58,7 +58,7 @@ export default Vue.extend({
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style  scoped>
 div {
   a {
     @apply hover:underline;

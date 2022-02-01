@@ -171,7 +171,7 @@ export default Vue.extend({
         </div>
 
         <article class="px-4">
-          <header class="space-y-4 text-center mb-12 sm:(text-left pr-16)">
+          <header class="space-y-4 text-center mb-12 sm:text-left sm:pr-16">
             <div class="space-y-2">
               <h1
                 class="font-bold text-2xl text-gray-700 block sm:text-4xl dark:text-neutral-300"
@@ -263,17 +263,7 @@ export default Vue.extend({
   </transition>
 </template>
 
-<style lang="scss">
-/* Mixins */
-@mixin code {
-  @apply font-sans bg-blue-100 py-px px-1 text-blue-600 dark:(bg-blue-900 bg-opacity-50 text-blue-400);
-
-  &::before,
-  &::after {
-    content: "`";
-  }
-}
-
+<style >
 /* Nuxt Content */
 .nuxt-content {
   /* Headings */
@@ -323,7 +313,12 @@ export default Vue.extend({
     }
 
     code {
-      @include code;
+        @apply font-sans bg-blue-100 py-px px-1 text-blue-600 dark:bg-blue-900 dark:bg-opacity-50 dark:text-blue-400;
+
+  &::before,
+  &::after {
+    content: "`";
+  }
     }
 
     &:not(:last-child) {
@@ -374,7 +369,12 @@ export default Vue.extend({
     }
 
     li code {
-      @include code;
+        @apply font-sans bg-blue-100 py-px px-1 text-blue-600 dark:bg-blue-900 dark:bg-opacity-50 dark:text-blue-400;
+
+  &::before,
+  &::after {
+    content: "`";
+  }
     }
 
     li:not(:last-child) {
@@ -404,7 +404,7 @@ export default Vue.extend({
 
   /* Keyboard */
   kbd {
-    @apply rounded-lg cursor-pointer bg-neutral-300 py-1 px-2 transition-colors text-neutral-600 select-none dark:(bg-neutral-800 text-neutral-400 hover:bg-neutral-700) hover:bg-neutral-200;
+    @apply rounded-lg cursor-pointer bg-neutral-300 py-1 px-2 transition-colors text-neutral-600 select-none dark:bg-neutral-800 dark:text-neutral-400 dark:hover:bg-neutral-700 hover:bg-neutral-200;
   }
 
   /* Video */

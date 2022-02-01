@@ -20,10 +20,8 @@
       /* Nuxt types */
       "@nuxt/types",
       "@nuxt/content",
-      "@nuxtjs/firebase",
       "@nuxtjs/axios",
       "@nuxtjs/moment",
-      "nuxt-windicss",
       "@nuxtjs/color-mode",
       "@nuxt/image",
       /* Additional types */

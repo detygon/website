@@ -166,12 +166,6 @@ export default Vue.extend({
             href: "/blog",
           },
           {
-            title: "Daily Songs",
-            description:
-              "Fresh, cool and great song recommendations from me each day!",
-            href: "/daily",
-          },
-          {
             title: "Donate",
             description:
               "Want to support me and my projects so that I can create better stuff in the future?",
@@ -288,7 +282,7 @@ export default Vue.extend({
     <section id="projects">
       <Title>Projects I currently work on</Title>
 
-      <div class="mt-4 grid gap-2 md:(gap-4 grid-cols-2)">
+      <div class="mt-4 grid gap-2 md:gap-4 md:grid-cols-2">
         <Card
           v-for="(project, index) in projects"
           :key="`project-${index}`"
@@ -303,7 +297,7 @@ export default Vue.extend({
           <template v-if="project.icon" #icon>
             <IconDev
               :brand="project.icon"
-              class="rounded-full bg-gray-100 h-14 p-2 text-neutral-500 w-14 dark:(bg-neutral-800 text-white)"
+              class="rounded-full bg-gray-100 h-14 p-2 text-neutral-500 w-14 dark:bg-neutral-800 dark:text-white"
             />
           </template>
         </Card>
@@ -312,7 +306,7 @@ export default Vue.extend({
 
     <section
       id="experiences"
-      class="mt-4 grid gap-6 sm:mt-6 md:(md:mt-10 gap-8 grid-cols-2)"
+      class="mt-4 grid gap-6 sm:mt-6 md:mt-10 md:gap-8 md:grid-cols-2"
     >
       <div>
         <Title>Experience</Title>
@@ -359,7 +353,7 @@ export default Vue.extend({
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 .description-link {
   @apply border-neutral-500 border-b-2 border-opacity-50 hover:border-opacity-75;
 }

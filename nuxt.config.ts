@@ -24,6 +24,16 @@ const Config: NuxtConfig = {
   rootDir: "./",
   srcDir: "src",
   target: "static",
+  build: {
+    postcss: {
+      plugins: {
+        "postcss-import": {},
+        "tailwindcss/nesting": {},
+        tailwindcss: {},
+        autoprefixer: {},
+      },
+    },
+  },
 
   /*
     Disabling server-side rendering on development mode because

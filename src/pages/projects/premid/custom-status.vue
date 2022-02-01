@@ -380,7 +380,7 @@ export default Vue.extend({
       </div>
 
       <div
-        class="space-y-4 mt-4 gap-x-4 gap-y-8 md:(grid space-y-0 grid-cols-2) "
+        class="space-y-4 mt-4 gap-x-4 gap-y-8 md:grid md:space-y-0 md:grid-cols-2"
       >
         <div class="space-y-2">
           <Title :padding="false"> Details (upper text) </Title>
@@ -650,10 +650,10 @@ export default Vue.extend({
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style  scoped>
 input,
 select {
-  @apply rounded-md bg-gray-200/40 py-2 px-4 ring-gray-200 ring-offset-2 ring-offset-gray-100 dark:(bg-neutral-700 text-gray-200 ring-offset-neutral-900 ring-neutral-700) focus:outline-none focus:(ring-1) ;
+  @apply rounded-md bg-gray-200/40 py-2 px-4 ring-gray-200 ring-offset-2 ring-offset-gray-100 dark:bg-neutral-700 dark:text-gray-200 dark:ring-offset-neutral-900 dark:ring-neutral-700 focus:outline-none focus:ring-1 ;
 
   &[type="time"] {
     @apply py-px px-2;
@@ -661,7 +661,7 @@ select {
 }
 
 .timestamp {
-  @apply bg-white rounded-md text-center p-2 ring-1 ring-gray-200 ring-offset-gray-100 ring-offset-2 select-none dark:(bg-neutral-700 ring-neutral-700 ring-offset-neutral-900) ;
+  @apply bg-white rounded-md text-center p-2 ring-1 ring-gray-200 ring-offset-gray-100 ring-offset-2 select-none dark:bg-neutral-700 dark:ring-neutral-700 dark:ring-offset-neutral-900 ;
 
   &:not(.cursor-default) {
     @apply cursor-pointer;
@@ -677,6 +677,6 @@ select {
 }
 
 a {
-  @apply text-blue-500 hover:(text-blue-600 underline) ;
+  @apply text-blue-500 hover:text-blue-600 hover:underline ;
 }
 </style>
