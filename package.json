@@ -58,7 +58,8 @@
     "sass": "^1.48.0",
     "vue-disqus": "^4.0.1",
     "vue-notion": "github:eggsy/vue-notion",
-    "vue-tippy": "4.13.0"
+    "vue-tippy": "4.13.0",
+    "wrangler": "0.0.15"
   },
   "devDependencies": {
     "@babel/core": "^7.16.7",
