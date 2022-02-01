@@ -188,7 +188,7 @@ export default Vue.extend({
   </div>
 </template>
 
-<style  scoped>
+<style scoped>
 a {
   @apply border-b border-gray-300 transition-colors dark:border-gray-700 dark:hover:border-gray-100 hover:border-gray-900;
 }

@@ -16,12 +16,12 @@ export default Vue.extend({
     getTargetRoute(): { title: string; name: string } {
       if (this.$route.name === "blog" && !this.isSearching)
         return {
-          title: "Ana Sayfaya Dön",
+          title: "Retour à la page d'accueil",
           name: "index",
         }
       else
         return {
-          title: "Bloga Dön",
+          title: "Retour au blog",
           name: "blog",
         }
     },
@@ -84,7 +84,7 @@ export default Vue.extend({
           <input
             id="search"
             v-model="input"
-            placeholder="Gönderi ara..."
+            placeholder="Rechercher..."
             class="rounded-tl-lg rounded-bl-lg bg-gray-100 w-full py-1.5 px-3 placeholder-gray-500 appearance-none dark:bg-neutral-800 focus:outline-none"
             @focus="inputFocused = true"
             @blur="inputFocused = false"

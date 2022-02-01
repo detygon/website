@@ -1,11 +1,3 @@
-declare module "@nuxt/types/config/runtime" {
-  interface NuxtRuntimeConfig {
-    social: Social
-    sponsor: Sponsor
-    links: Links
-  }
-}
-
 /* Interfaces */
 export interface Sponsor {
   patreon: string
@@ -20,11 +12,6 @@ export interface Social {
   email: string
 }
 
-export interface Links {
-  unblockPlease: UnblockPlease
-  isInsideMe: IsInsideMe
-}
-
 export interface IsInsideMe {
   website: string
   faq: string
@@ -33,4 +20,17 @@ export interface IsInsideMe {
 export interface UnblockPlease {
   webstore: string
   github: string
+}
+
+export interface Links {
+  unblockPlease: UnblockPlease
+  isInsideMe: IsInsideMe
+}
+
+declare module "@nuxt/types/config/runtime" {
+  interface NuxtRuntimeConfig {
+    social: Social
+    sponsor: Sponsor
+    links: Links
+  }
 }

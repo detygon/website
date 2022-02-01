@@ -64,12 +64,12 @@ export default Vue.extend({
         description,
         image,
         keywords: "premid, custom, status",
-        url: "https://eggsy.xyz/projects/premid/custom-status",
+        url: "https://detygon.com/projects/premid/custom-status",
       }),
       link: [
         {
           rel: "canonical",
-          href: "https://eggsy.xyz/projects/premid/custom-status",
+          href: "https://detygon.com/projects/premid/custom-status",
         },
         {
           rel: "prefetch",
@@ -534,7 +534,7 @@ export default Vue.extend({
                 v-model="presence.buttons[0].url"
                 type="text"
                 class="w-full"
-                placeholder="https://eggsy.xyz"
+                placeholder="https://detygon.com"
               />
             </div>
 
@@ -650,10 +650,10 @@ export default Vue.extend({
   </div>
 </template>
 
-<style  scoped>
+<style scoped>
 input,
 select {
-  @apply rounded-md bg-gray-200/40 py-2 px-4 ring-gray-200 ring-offset-2 ring-offset-gray-100 dark:bg-neutral-700 dark:text-gray-200 dark:ring-offset-neutral-900 dark:ring-neutral-700 focus:outline-none focus:ring-1 ;
+  @apply rounded-md bg-gray-200/40 py-2 px-4 ring-gray-200 ring-offset-2 ring-offset-gray-100 dark:bg-neutral-700 dark:text-gray-200 dark:ring-offset-neutral-900 dark:ring-neutral-700 focus:outline-none focus:ring-1;
 
   &[type="time"] {
     @apply py-px px-2;
@@ -661,7 +661,7 @@ select {
 }
 
 .timestamp {
-  @apply bg-white rounded-md text-center p-2 ring-1 ring-gray-200 ring-offset-gray-100 ring-offset-2 select-none dark:bg-neutral-700 dark:ring-neutral-700 dark:ring-offset-neutral-900 ;
+  @apply bg-white rounded-md text-center p-2 ring-1 ring-gray-200 ring-offset-gray-100 ring-offset-2 select-none dark:bg-neutral-700 dark:ring-neutral-700 dark:ring-offset-neutral-900;
 
   &:not(.cursor-default) {
     @apply cursor-pointer;
@@ -677,6 +677,6 @@ select {
 }
 
 a {
-  @apply text-blue-500 hover:text-blue-600 hover:underline ;
+  @apply text-blue-500 hover:text-blue-600 hover:underline;
 }
 </style>

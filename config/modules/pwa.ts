@@ -1,7 +1,7 @@
 export default {
   manifest: {
-    name: "eggsy.xyz",
-    short_name: "eggsy.xyz",
+    name: "detygon.com",
+    short_name: "detygon.com",
     theme_color: "#f56565",
     lang: "en",
   },

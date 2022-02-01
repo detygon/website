@@ -10,41 +10,17 @@ export default Vue.extend({
       accounts: [
         {
           image: "https://i.vgy.me/QJNSYE.png",
-          name: "Ziraat Bank",
-          iban: "TR 1100 0100 2544 95837917 5001",
-          revealed: false,
-        },
-        {
-          image: "https://i.vgy.me/l1CN85.png",
-          name: "QNB Finansbank",
-          iban: "TR96 0011 1000 0000 0086 7646 98",
-          revealed: false,
-        },
-        {
-          image: "https://i.vgy.me/9e6pkz.png",
-          name: "Denizbank",
-          iban: "TR31 0013 4000 0189 9352 2000 01",
-          revealed: false,
-        },
-        {
-          image: "https://i.vgy.me/R0Jwqn.png",
-          name: "Papara",
-          iban: "8664721806",
-          revealed: false,
-        },
-        {
-          image: "https://i.vgy.me/UCiozk.png",
-          name: "PayPal",
-          iban: "@eggsydev",
+          name: "Afriland First Bank",
+          iban: "OMFNCIABXXX 009831900301",
           revealed: false,
         },
       ],
     }
   },
   head() {
-    const title = "Donate"
+    const title = "Faire un don"
     const description =
-      "Like my projects? You can donate to me to boost my performance and help me create more, better projects in the future!"
+      "Vous aimez ce que je fait ? Vous pouvez faire un don pour m'encourager et m'aider à créer plus de projets de meilleure qualité à l'avenir !"
 
     return {
       title,
@@ -52,12 +28,12 @@ export default Vue.extend({
         title,
         description,
         keywords: "donate",
-        url: "https://eggsy.xyz/donate",
+        url: "https://detygon.com/donate",
       }),
       link: [
         {
           rel: "canonical",
-          href: "https://eggsy.xyz/donate",
+          href: "https://detygon.com/donate",
         },
       ],
     }
@@ -79,22 +55,22 @@ export default Vue.extend({
   <div class="py-4">
     <div class="space-y-12 text-gray-500 sm:w-9/12 dark:text-neutral-600">
       <header class="space-y-2 my-12 px-4">
-        <h1 class="text-gray-700 text-4xl dark:text-neutral-300">Donate</h1>
+        <h1 class="text-gray-700 text-4xl dark:text-neutral-300">Faire un don</h1>
 
         <p>
-          If you like my projects and/or what I do and you want to contribute,
-          make me happy, you can donate to me with the information on this page!
-          Thank you ♥
+          Si vous aimez mes projets et/ou ce que je fais et que vous voulez contribuer,
+          me faire plaisir, vous pouvez me faire un don avec les informations de cette page !
+          Merci ♥
         </p>
 
         <p class="text-xs">
-          P.S. Use "<span class="underline">Abdulbaki Dursun</span>" as the name
-          of your transactions.
+          P.S. Utilisez le nom "<span class="underline">Dion Dety Gon Salomon</span>" comme nom
+          de vos transactions.
         </p>
       </header>
 
       <section class="space-y-4">
-        <Title> Support Me On </Title>
+        <Title> Soutenez-moi sur </Title>
 
         <Button
           variant="patreon"
@@ -109,12 +85,12 @@ export default Vue.extend({
             />
           </template>
 
-          Become a Patron
+          Devenir un Patron
         </Button>
       </section>
 
       <section class="space-y-4">
-        <Title> My Accounts </Title>
+        <Title> Mes comptes </Title>
 
         <div class="grid px-4 gap-4">
           <div
@@ -148,7 +124,7 @@ export default Vue.extend({
                   v-else
                   class="cursor-pointer text-gray-800 dark:text-neutral-500 hover:underline"
                   @click="account.revealed = true"
-                  >Click to reveal</span
+                  >Cliquez pour afficher</span
                 >
               </div>
             </div>

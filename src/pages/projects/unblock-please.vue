@@ -16,12 +16,12 @@ export default Vue.extend({
         title,
         description,
         keywords: "unblock please",
-        url: "https://eggsy.xyz/projects/is-inside-me",
+        url: "https://detygon.com/projects/is-inside-me",
       }),
       link: [
         {
           rel: "canonical",
-          href: "https://eggsy.xyz/projects/unblock-please",
+          href: "https://detygon.com/projects/unblock-please",
         },
       ],
     }

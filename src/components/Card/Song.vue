@@ -27,9 +27,9 @@ export default Vue.extend({
     getDateText(): string {
       if (
         this.$moment(this.date).utcOffset(3).format("DD/MM/YYYY") ===
-        this.$moment(this.$getTurkeyTime()).format("DD/MM/YYYY")
+        this.$moment(this.$getIvoryCoastTime()).format("DD/MM/YYYY")
       )
-        return "Today's Song"
+        return "La chanson d'aujourd'hui"
       else return this.$moment(this.date).utcOffset(3).format("DD/MM/YYYY")
     },
   },

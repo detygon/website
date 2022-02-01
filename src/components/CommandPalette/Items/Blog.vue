@@ -29,7 +29,7 @@ export default Vue.extend({
 
 <template>
   <div class="space-y-2">
-    <Title size="xs">Latest posts</Title>
+    <Title size="xs">Derniers articles</Title>
 
     <CommandPaletteControls v-if="getPosts.length === 0">
       <CommandPaletteControlsItem v-for="i in 10" :key="i" loading />
@@ -39,14 +39,14 @@ export default Vue.extend({
       <SmartLink
         v-for="(post, idx) in getPosts"
         :key="`post-${idx}`"
-        :href="`/blog/gonderi/${post.slug}`"
+        :href="`/blog/articles/${post.slug}`"
         @click.native="$emit('close')"
       >
         <CommandPaletteControlsItem
           :title="post.title"
           icon="Link"
           :active="
-            $route.name === 'blog-gonderi-slug' &&
+            $route.name === 'blog-articles-slug' &&
             $route.params.slug === post.slug
           "
         />

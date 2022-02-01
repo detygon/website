@@ -31,168 +31,105 @@ export default Vue.extend({
       repos: [] as Repository[],
       projects: [
         {
-          title: "PreMiD",
-          to: "/projects/premid",
-          description:
-            "Simple, configurable utility that allows you to show what you're doing on the web in your Discord now playing status.",
-          icon: "PreMiD",
-        },
-        {
-          title: "This Website",
+          title: "Ce site web",
           to: "/",
           description:
-            "My personal website, blog, goals, daily songs and much more!",
+            "Mon site web personnel, mon blog, mes objectifs et bien plus encore !",
           icon: "website",
-        },
-        {
-          title: "Unblock Please",
-          to: "/projects/unblock-please",
-          description:
-            "Unblock Imgur and Pastebin access using secure proxies!",
-          icon: "UnblockPlease",
-        },
-        {
-          title: "is-inside.me",
-          to: "/projects/is-inside-me",
-          description:
-            "Free image and file uploading service for uploaders like ShareX!",
-          icon: "IsInsideMe",
         },
       ] as Project[],
       experiences: {
         jobs: [
           {
-            title: "Discord Templates",
-            url: "https://discords.com/templates",
-            position: "Web Developer & Co-Founder",
-            date: "2020-2021",
+            title: "Futurafric IA",
+            url: "https://futurafric.com/",
+            position: "Data Engineer",
+            date: "2019-2022",
           },
           {
-            title: "IZM Game Studios",
-            url: "https://izmgamestudios.com",
-            position: "Solution Partner",
-            date: "2020-2021",
+            title: "AKIL Technologies",
+            url: "https://akiltechnologies.com",
+            position: "Développeur Back-End",
+            date: "2019-2019",
           },
           {
-            title: "TruckersMP",
-            url: "https://truckersmp.com/user/1648033",
-            position: "Community Moderator & Translator",
-            date: "2020-2021",
-          },
-          {
-            title: "WA Web+ Extension",
-            url: "https://wawplus.com",
-            position: "Translator",
-            date: "2020-2021",
-          },
-          {
-            title: "Batakköylü Düğün Salonu",
-            url: "https://batakkoylu.netlify.app",
-            position: "Web Developer",
-            date: "2020-2020",
-          },
-          {
-            title: "EGGSY's Discord Bot",
-            url: "https://top.gg/bot/eggsy",
-            position: "Creator, Developer and Maintainer",
-            date: "2017-2019",
-          },
-          {
-            title: "Discord Bot List",
-            url: "https://top.gg/user/162969778699501569",
-            position: "Website Moderator",
-            date: "2017-2018",
+            title: "Save The Children CI",
+            url: "https://cotedivoire.savethechildren.net/",
+            position: "Assistant bilingue",
+            date: "2018-2019",
           },
         ],
         education: [
           {
-            title: "Goce Delchev University",
-            url: "https://www.ugd.edu.mk/",
-            position: "Erasmus+ Student",
-            date: "2021-",
+            title: "University of Central Lancashire",
+            url: "https://www.uclan.ac.uk/",
+            position: "Bsc Business Computing & Information systems",
+            date: "2016-2020",
           },
           {
-            title: "Muş Alparslan University",
-            url: "http://alparslan.edu.tr/",
-            position: "English Language Teaching",
-            date: "2020-",
-          },
-          {
-            title: "Rotosis Robotics",
-            url: "https://www.rotosis.com/",
-            position: "Intern",
-            date: "2017-2018",
-          },
-          {
-            title: "Adil Karaağaç MTAL",
-            url: "https://akatl.meb.k12.tr/",
-            position: "Automation Systems",
-            date: "2014-2018",
-          },
+            title: "Lycée de garçon de Bingerville",
+            url: "https://www.facebook.com/groups/231206027294980",
+            position: "Terminale A2",
+            date: "2013-2016",
+          }
         ],
       } as ExperienceObject,
       cards: {
         me: [
           {
-            title: "Repositories",
+            title: "Dépôts",
             description:
-              "Want to see and/or contribute to my code and public repositories?",
+              "Vous voulez voir et/ou contribuer à mon code et à mes dépôts publics ?",
             href: "/me/repos",
           },
           {
-            title: "Goals",
+            title: "Objectifs",
             description:
-              "Want to know what I'm working on now and what I'll in the future?",
+              "Vous voulez savoir sur quoi je travaille en ce moment et ce que je ferai à l'avenir ?",
             href: "/me/goals",
-          },
-          {
-            title: "Songs",
-            description:
-              "Trust your taste? Compare your favourite songs and artists with mine!",
-            href: "/me/songs",
           },
           {
             title: "Contact",
             description:
-              "Need help with anything? Want to get in touch? Send me a message!",
+              "Vous avez besoin d'aide pour quoi que ce soit ? Vous voulez entrer en contact avec moi ? Envoyez-moi un message !",
             href: "/me/contact",
+          },
+          {
+            title: "Chansons",
+            description:
+              "Vous avez confiance en vos goûts ? Comparez vos chansons et artistes préférés avec les miens !",
+            href: "/me/songs",
           },
         ],
         pages: [
           {
             title: "Blog",
             description:
-              "My Turkish stories about real-life, programming, development and more!",
+              "Mon espace de partage sur la programmation, la technologie et mon expérience !",
             href: "/blog",
           },
           {
-            title: "Donate",
+            title: "Faire un don",
             description:
-              "Want to support me and my projects so that I can create better stuff in the future?",
+              "Vous voulez me soutenir et soutenir mes projets pour que je puisse créer de meilleures choses à l'avenir ?",
             href: "/donate",
           },
         ],
       },
       skills: [
-        "JavaScript",
-        "HTML5",
-        "Nuxt.js",
-        "Vue.js",
-        "Tailwind CSS",
-        "Windi CSS",
-        "Node.js",
-        "TypeScript",
-        "Sass",
-        "Figma",
-        "Firebase",
-        "WordPress",
-        "PHP",
-        "React.js",
+        "Python",
+        "DBT",
+        "Snowflake",
+        "PySpark",
+        "Dagster",
+        "Docker",
+        "AWS",
+        "Databriks",
       ],
     }
   },
   head: {
-    title: "Home",
+    title: "Accueil",
   },
 })
 </script>
@@ -207,34 +144,19 @@ export default Vue.extend({
           <div
             class="font-semibold text-xl text-neutral-700 md:text-3xl dark:text-neutral-200"
           >
-            <h1>Self taught</h1>
             <h1>
               <SmartLink
-                href="https://www.w3schools.com/whatis/whatis_fullstack_js.asp"
+                href="https://www.clementine.jobs/fiches-metiers/metiers-du-big-data/data-engineer"
                 class="cursor-help border-b-2 border-blue-700 text-blue-700 dark:border-neutral-500 dark:text-neutral-500"
                 blank
-                >Full-stack</SmartLink
+                >Data Engineer</SmartLink
               >
-              web developer
             </h1>
           </div>
 
           <p class="text-neutral-500">
-            Hi there, my name is Abdulbaki, I am from Turkey and I am a self
-            taught web developer. I build complex web apps using tools like
-            <SmartLink href="https://vuejs.org/" class="description-link" blank
-              >Vue.js</SmartLink
-            >,
-            <SmartLink href="https://nuxtjs.org/" class="description-link" blank
-              >Nuxt.js</SmartLink
-            >
-            {{ "" }} and
-            <SmartLink
-              href="https://windicss.org/"
-              class="description-link"
-              blank
-              >Windi CSS</SmartLink
-            >.
+            Salut, je suis Salomon Dion, originaire de Côte d'Ivoire, et je suis un Data Engineer.
+            J'aide à la prise de décision et l'amélioration des performances des entreprises en développant des plateformes de données.
           </p>
         </div>
 
@@ -280,7 +202,7 @@ export default Vue.extend({
     </section>
 
     <section id="projects">
-      <Title>Projects I currently work on</Title>
+      <Title>Les projets sur lesquelles je travaille actuellement:</Title>
 
       <div class="mt-4 grid gap-2 md:gap-4 md:grid-cols-2">
         <Card
@@ -309,7 +231,7 @@ export default Vue.extend({
       class="mt-4 grid gap-6 sm:mt-6 md:mt-10 md:gap-8 md:grid-cols-2"
     >
       <div>
-        <Title>Experience</Title>
+        <Title>Expérience professionel</Title>
 
         <div class="mt-4 grid gap-2">
           <CardExperience
@@ -340,7 +262,7 @@ export default Vue.extend({
     </section>
 
     <section id="technologies" class="mt-6">
-      <Title>Technologies I use</Title>
+      <Title>Les technologies que j'utilise</Title>
 
       <div class="mt-4 grid gap-2 sm:grid-cols-3 md:grid-cols-4">
         <CardSkill

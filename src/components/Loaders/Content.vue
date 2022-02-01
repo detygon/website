@@ -81,9 +81,7 @@ export default Vue.extend({
     </h1>
 
     <p class="text-gray-700 dark:text-gray-300">
-      Aradığınız gönderinin blogumda olduğuna, adreste bir yanlışlık olmadığına
-      emin olun. Arama özelliğini kullanarak gönderiyi aratabilir, anasayfaya
-      dönerek diğer gönderilerime ulaşabilirsiniz.
+Assurez-vous l'article ce que vous recherchez est sur mon blog et qu'il n'y a rien de mal avec l'adresse. Vous pouvez rechercher l'article à l'aide de la fonction de recherche, revenir à la page d'accueil et trouver mes autres articles.
     </p>
   </div>
 </template>

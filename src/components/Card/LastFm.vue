@@ -69,7 +69,7 @@ export default Vue.extend({
       v-if="plays"
       class="rounded-full font-semibold flex-shrink-0 text-sm p-2"
     >
-      {{ plays }} plays
+      {{ plays }} lectures
     </div>
   </SmartLink>
 </template>

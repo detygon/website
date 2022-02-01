@@ -12,7 +12,7 @@ declare module "vue/types/vue" {
       rest?: any[]
     ): Meta[]
     $momentTz: MomentTimezone
-    $getTurkeyTime(): Date
+    $getIvoryCoastTime(): Date
   }
 }
 
@@ -25,7 +25,7 @@ declare module "@nuxt/types" {
       rest?: any[]
     ): Meta[]
     $momentTz: MomentTimezone
-    $getTurkeyTime(): Date
+    $getIvoryCoastTime(): Date
   }
 
   interface Context {
@@ -36,6 +36,6 @@ declare module "@nuxt/types" {
       rest?: any[]
     ): Meta[]
     $momentTz: MomentTimezone
-    $getTurkeyTime(): Date
+    $getIvoryCoastTime(): Date
   }
 }

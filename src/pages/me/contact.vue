@@ -18,7 +18,7 @@ export default Vue.extend({
   head() {
     const title = "Contact"
     const description =
-      "Need to get in touch with me? Have any questions? Want to join my Discord server? Click here!"
+      "Vous avez besoin de me contacter ? Vous avez des questions ? Vous voulez rejoindre mon serveur Discord ? Cliquez ici !"
 
     return {
       title,
@@ -33,11 +33,11 @@ export default Vue.extend({
       const social = this.$config.social
 
       const titles = {
-        discord: "Join my Discord server!",
-        twitter: "Follow me on Twitter!",
-        github: "Follow me on GitHub!",
-        instagram: "Follow me on Instagram!",
-        trello: "View my Trello board!",
+        discord: "Rejoignez mon serveur Discord !",
+        twitter: "Suivez-moi sur Twitter !",
+        github: "Suivez-moi sur GitHub !",
+        instagram: "Suivez-moi sur Instagram !",
+        trello: "Voir mon tableau Trello !",
       }
 
       const array: Link[] = []
@@ -68,7 +68,7 @@ export default Vue.extend({
   <div class="text-gray-500 dark:text-neutral-600">
     <header class="space-y-2 my-12 px-4">
       <h1 class="text-gray-900 text-4xl dark:text-neutral-300">Contact</h1>
-      <p>If you have any questions, feel free to contact me.</p>
+      <p>Si vous avez des questions, n'hésitez pas à me contacter.</p>
     </header>
 
     <div class="grid gap-4 md:grid-cols-2">
@@ -96,7 +96,7 @@ export default Vue.extend({
           <IconAt class="h-8 w-8" />
         </template>
 
-        Send me an email!
+        Envoyez-moi un e-mail !
       </Card>
     </div>
   </div>

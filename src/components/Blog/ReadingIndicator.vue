@@ -85,7 +85,9 @@ export default Vue.extend({
       v-show="isElementVisible"
       v-tippy="{
         content:
-          getPercentLeftBottom === 100 ? 'Tüm yazı okundu!' : 'Okuma oranı',
+          getPercentLeftBottom === 100
+            ? 'L\'intégralité de l\'article a été lu !'
+            : 'Pourcentage de lecture',
       }"
     >
       <div

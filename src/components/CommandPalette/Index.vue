@@ -31,7 +31,7 @@ export default Vue.extend({
           value: [
             {
               name: "welcome",
-              title: "Welcome",
+              title: "Bienvenue",
               icon: "Star",
               component: "CommandPaletteItems" + "Welcome",
             },
@@ -58,19 +58,19 @@ export default Vue.extend({
               href: "/me/contact",
             },
             {
-              title: "Donate",
+              title: "Faire un don",
               icon: "Fire",
               href: "/donate",
             },
             {
-              title: "Repositories",
+              title: "Dépôts",
               icon: "Cog",
               href: "/me/repos",
             },
           ],
         },
         {
-          name: "Socials",
+          name: "Réseaux sociaux",
           value: [
             {
               title: "GitHub",
@@ -164,7 +164,7 @@ export default Vue.extend({
             <div class="space-y-6 w-3/12 overflow-y-auto">
               <!-- Dynamic -->
               <div class="space-y-2">
-                <Title size="xs">Dynamic</Title>
+                <Title size="xs">Dynamique</Title>
 
                 <div class="space-y-1">
                   <CommandPaletteControls

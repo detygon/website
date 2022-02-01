@@ -115,7 +115,7 @@ export default Vue.extend({
       link: [
         {
           rel: "canonical",
-          href: "https://eggsy.xyz/projects/premid/mdcreator",
+          href: "https://detygon.com/projects/premid/mdcreator",
         },
       ],
       meta: this.$prepareMeta({
@@ -123,7 +123,7 @@ export default Vue.extend({
         description,
         image,
         keywords: "premid, custom, status",
-        url: "https://eggsy.xyz/projects/premid/mdcreator",
+        url: "https://detygon.com/projects/premid/mdcreator",
       }),
     }
   },
@@ -1044,7 +1044,9 @@ export default Vue.extend({
             </span>
           </div>
 
-          <div class="space-y-2 sm:flex sm:space-y-0 sm:space-x-4 sm:items-center">
+          <div
+            class="space-y-2 sm:flex sm:space-y-0 sm:space-x-4 sm:items-center"
+          >
             <a
               v-if="getMetadata.error === false"
               class="flex space-x-2 bg-gray-200 items-center justify-center control-button no-background sm:w-max dark:bg-neutral-800 dark:hover:bg-neutral-700 hover:bg-gray-300"
@@ -1071,7 +1073,7 @@ export default Vue.extend({
   </div>
 </template>
 
-<style  scoped>
+<style scoped>
 p,
 .span {
   @apply text-gray-800 dark:text-gray-200;

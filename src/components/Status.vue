@@ -23,51 +23,51 @@ export default Vue.extend({
      */
     getStatusDetails(): string {
       const lanyard = this.lanyard
-      if (!lanyard) return "Couldn't fetch data from Lanyard"
+      if (!lanyard) return "Impossible de récupérer les données de Lanyard"
 
       const filtered: Activity | null =
         lanyard.activities?.filter((activity) => activity.type !== 4)?.pop() ||
         null
 
       // Offline
-      if (this.lanyard?.discord_status === "offline") return "Offline"
-      else if (!filtered) return "Online"
+      if (this.lanyard?.discord_status === "offline") return "Hors ligne"
+      else if (!filtered) return "En ligne"
       // Spotify
       else if (filtered.name === "Spotify" && !!lanyard.spotify) {
         const { song, artist } = lanyard.spotify || {}
         const firstArtist = artist?.split("; ")?.[0]
 
-        return `Listening to **${song}** by **${firstArtist || "someone"}**`
+        return `Ecoute **${song}** par **${firstArtist || "un artiste"}**`
       }
       // Visual Studio Code
       else if (filtered.name === "Visual Studio Code") {
         const replaced =
           filtered.state?.replace("📁 ", "")?.split(" | ")?.[0] || "a file"
-        return `Editing **${replaced}** in **Visual Studio Code**`
+        return `Code **${replaced}** dans **Visual Studio Code**`
       }
       // Netflix
       else if (filtered.name === "Netflix" && filtered.details) {
-        return `Watching **${filtered.details}** on **Netflix**`
+        return `Regarde **${filtered.details}** sur **Netflix**`
       }
       // YouTube Music
       else if (filtered.name === "YouTube Music" && filtered.details) {
-        return `Listening to **${filtered.details}** on **YouTube Music**`
+        return `Ecoute  **${filtered.details}** sur **YouTube Music**`
       }
       // YouTube
       else if (filtered.name === "YouTube" && filtered.details) {
-        return `Watching ${filtered.details} on YouTube`
+        return `Regarde ${filtered.details} sur YouTube`
       }
       // Default values
       else
         switch (filtered.name) {
           case "Google Meet":
-            return "In a Google Meet meeting"
+            return "En Google Meet"
           case "Twitch":
-            return "Watching a stream on Twitch"
+            return "Regarder un stream sur Twitch"
           case "Prime Video":
-            return "Watching something on Prime Video"
+            return "Regarder quelque chose sur Prime Video"
           default:
-            return "Online"
+            return "En ligne"
         }
     },
     /**
@@ -144,7 +144,7 @@ export default Vue.extend({
     <div
       v-else
       v-tippy="{
-        content: 'Discord status',
+        content: 'Status Discord',
         placement: 'bottom',
       }"
       :class="`h-5 w-5 rounded-full flex-shrink-0 ${getDiscordStatus}`"

@@ -17,33 +17,33 @@ export default Vue.extend({
     return {
       errors: {
         400: {
-          title: "Bad Request",
-          description: "Bad, bad request!",
+          title: "Mauvaise requête",
+          description: "Mauvaise, mauvaise requête !",
         },
         401: {
-          title: "Unauthorized",
+          title: "Non autorisé",
           description:
-            "This page requires some authorization stuff, or maybe you can't just access this.",
+            "Cette page nécessite une autorisation, ou peut-être que vous ne pouvez pas y accéder.",
         },
         403: {
-          title: "Forbidden",
-          description: "Maybe you shouldn't be here!",
+          title: "Interdit",
+          description: "Peut-être que tu ne devrais pas être ici !",
         },
         404: {
-          title: "Page Not Found",
-          description: "Are you sure you entered a right URL?",
+          title: "Page non trouvée",
+          description: "Êtes-vous sûr d'avoir entré une bonne URL ?",
         },
         500: {
-          title: "Internal Server Error",
+          title: "Erreur de serveur interne",
           description:
-            "Lucky. This is not related to you. It's my fault. Please reach me out so that I can fix this issue.",
+            "Heureusement ce n'est pas lié à vous. C'est de ma faute. S'il vous plaît, contactez-moi pour que je puisse régler ce problème.",
         },
       },
     }
   },
   head() {
     return {
-      title: `Error ${this.$props.error.statusCode}`,
+      title: `Erreur ${this.$props.error.statusCode}`,
     }
   },
   computed: {
@@ -56,9 +56,9 @@ export default Vue.extend({
 
       return {
         // @ts-ignore-next-line
-        title: this.errors[statusCode]?.title || "Unknown",
+        title: this.errors[statusCode]?.title || "Inconnu",
         // @ts-ignore-next-line
-        description: this.errors[statusCode]?.description || "No description.",
+        description: this.errors[statusCode]?.description || "Aucune description.",
       }
     },
   },
@@ -80,10 +80,10 @@ export default Vue.extend({
   <div class="space-y-4 py-8 px-4">
     <div>
       <h1 class="text-2xl text-gray-900 dark:text-gray-100">
-        Something bad happened...
+        Quelque chose de grave est arrivé...
       </h1>
 
-      <p class="text-lg text-gray-700 dark:text-gray-300">Maybe this'd help:</p>
+      <p class="text-lg text-gray-700 dark:text-gray-300">Peut-être que ça aiderait :</p>
     </div>
 
     <div
@@ -98,7 +98,7 @@ export default Vue.extend({
 
       <div class="space-y-4 whitespace-normal">
         <div class="flex flex-col">
-          <h3 class="font-semibold text-gray-800 dark:text-gray-200">Title:</h3>
+          <h3 class="font-semibold text-gray-800 dark:text-gray-200">Titre:</h3>
           <code>{{ getErrorMeta.title }}</code>
         </div>
 
@@ -111,7 +111,7 @@ export default Vue.extend({
 
         <div class="flex flex-col">
           <h3 class="font-semibold text-gray-800 dark:text-gray-200">
-            Details:
+            Détails:
           </h3>
           <code>{{ JSON.stringify(error) }}</code>
         </div>
@@ -119,16 +119,16 @@ export default Vue.extend({
     </div>
 
     <div class="flex flex-wrap space-x-2">
-      <button title="Click to go back" @click="$router.back()">Go Back</button>
+      <button title="Cliquez pour revenir en arrière" @click="$router.back()">Retour en arrière</button>
 
-      <button title="Click to refresh the page" @click="refresh">
-        Refresh Page
+      <button title="Cliquez pour rafraîchir la page" @click="refresh">
+        Rafraîchir la page
       </button>
     </div>
   </div>
 </template>
 
-<style  scoped>
+<style scoped>
 button {
   @apply rounded cursor-pointer bg-gray-200 py-2 px-4 transition-colors text-gray-900 select-none dark:bg-neutral-800 dark:text-gray-100 dark:hover:bg-neutral-700 hover:bg-gray-300 focus:outline-none;
 }

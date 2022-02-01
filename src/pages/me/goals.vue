@@ -18,9 +18,9 @@ export default Vue.extend({
     this.blockMap = blocks
   },
   head(): any {
-    const title = "Goals"
+    const title = "Objectifs"
     const description =
-      "Goals that I want to achieve in the future such as habits, hobbies, knowledge and more."
+      "Les objectifs que je souhaite atteindre à l'avenir, tels que les habitudes, les loisirs, les connaissances, etc."
 
     return {
       title,
@@ -51,8 +51,8 @@ export default Vue.extend({
 
     <div v-else class="px-4 text-gray-500 dark:text-neutral-600">
       <header class="space-y-2 my-12">
-        <h1 class="text-gray-900 text-4xl dark:text-neutral-300">Goals</h1>
-        <p>Things that I want to achieve.</p>
+        <h1 class="text-gray-900 text-4xl dark:text-neutral-300">Objectifs</h1>
+        <p>Les choses que je veux réaliser.</p>
 
         <small class="text-xs" title="Last edited on">
           {{ getLastEditedTime }}

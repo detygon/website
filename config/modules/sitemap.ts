@@ -4,11 +4,11 @@ export default async function () {
 
   const routes = []
   for (const post of posts) {
-    routes.push(`blog/gonderi/${post.slug}`)
+    routes.push(`blog/articles/${post.slug}`)
   }
 
   return {
-    hostname: "https://eggsy.xyz",
+    hostname: "https://detygon.com",
     gzip: true,
     routes,
   }

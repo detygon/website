@@ -13,15 +13,12 @@ export default Vue.extend({
   fetchOnServer: false,
   async fetch() {
     const filter = [
-      "eggsy",
-      "DBM",
-      "eggsywashere.github.io",
-      "bu-saatte-cekilir-mi",
+      "website"
     ]
 
     const repos: Repository[] = (
       await this.$axios.get(
-        "https://api.github.com/users/eggsy/repos?per_page=100"
+        "https://api.github.com/users/detygon/repos?per_page=100"
       )
     ).data
 
@@ -30,8 +27,8 @@ export default Vue.extend({
       ?.sort((a, b) => b?.stargazers_count - a?.stargazers_count)
   },
   head() {
-    const title = "GitHub Repositories"
-    const description = "My public projects hosted on GitHub."
+    const title = "Dépôts GitHub"
+    const description = "Mes projets publics hébergés sur GitHub."
 
     return {
       title,
@@ -47,8 +44,8 @@ export default Vue.extend({
 <template>
   <div class="text-gray-500 dark:text-neutral-600">
     <header class="space-y-2 my-12 px-4">
-      <h1 class="text-gray-900 text-4xl dark:text-neutral-300">Repositories</h1>
-      <p>My public projects on GitHub.</p>
+      <h1 class="text-gray-900 text-4xl dark:text-neutral-300">Dépôts</h1>
+      <p>Mes projets publics sur GitHub.</p>
     </header>
 
     <main>

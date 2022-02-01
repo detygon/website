@@ -10,9 +10,10 @@ export default function getReadableDate(date: Date): string {
   const createdAt = moment(date)
   const diff = now.diff(createdAt, "days")
 
-  if (diff === 0) return "Bugün"
-  else if (diff === 1) return "Dün"
-  else if (diff <= 30) return `${diff} gün önce`
-  else if (diff >= 30 && diff <= 90) return `${Math.floor(diff / 30)} ay önce`
+  if (diff === 0) return "Aujourd'hui"
+  else if (diff === 1) return "Hier"
+  else if (diff <= 30) return `il y ${diff} jour${diff > 1 ? "s" : ""}`
+  else if (diff >= 30 && diff <= 90)
+    return `il y a ${Math.floor(diff / 30)} mois`
   else return createdAt.format("DD/MM/YYYY")
 }

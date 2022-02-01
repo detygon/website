@@ -21,7 +21,7 @@ export default Vue.extend({
 
     const data: GithubActivity[] = (
       await this.$axios.get(
-        "https://api.github.com/users/eggsy/events?per_page=50"
+        "https://api.github.com/users/detygon/events?per_page=50"
       )
     ).data
 
@@ -40,24 +40,24 @@ export default Vue.extend({
       // Star
       if (activity.type === "WatchEvent")
         return {
-          value: `Starred <strong>${repo}</strong>`,
+          value: `A étoilé <strong>${repo}</strong>`,
           type: "star",
           repo,
         }
       // Create
       else if (activity.type === "CreateEvent")
         return {
-          value: `Created <strong>${repo}</strong>`,
+          value: `A créé <strong>${repo}</strong>`,
           type: "create",
           repo,
         }
       // Delete
       else if (activity.type === "DeleteEvent") {
         const { ref, ref_type: refType } = activity.payload
-        const text = refType === "branch" ? "Deleted branch" : "Deleted"
+        const text = refType === "branch" ? "Branche supprimée" : "Supprimé"
 
         return {
-          value: `${text} <strong>${ref}</strong> of <strong>${repo}</strong>`,
+          value: `${text} <strong>${ref}</strong> de <strong>${repo}</strong>`,
           type: "delete",
           repo,
         }
@@ -68,7 +68,7 @@ export default Vue.extend({
         const name = forkee?.full_name || repo.split("/")[1]
 
         return {
-          value: `Forked <strong>${name}</strong> from <strong>${repo}</strong>`,
+          value: `Forked <strong>${name}</strong> depuis <strong>${repo}</strong>`,
           type: "fork",
           repo,
         }
@@ -78,7 +78,7 @@ export default Vue.extend({
         const { distinct_size: distinctSize } = activity.payload
 
         return {
-          value: `Pushed <strong>${distinctSize}</strong> commits to <strong>${repo}</strong>`,
+          value: `Poussé <strong>${distinctSize}</strong> commits vers <strong>${repo}</strong>`,
           type: "push",
           repo,
         }
@@ -104,7 +104,7 @@ export default Vue.extend({
 
 <template>
   <div class="space-y-2 relative">
-    <Title size="xs">Latest GitHub activity</Title>
+    <Title size="xs">Dernière activité GitHub</Title>
 
     <CommandPaletteControls v-if="getRepositories.length === 0">
       <CommandPaletteControlsItem v-for="i in 10" :key="i" loading />

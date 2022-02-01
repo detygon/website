@@ -15,8 +15,8 @@ export default Vue.extend({
         linux: [] as Post[],
         rest: [] as Post[],
       },
-      categories: ["Discord", "Linux", "Eğitim", "Frontend", "Site"],
-      selectedCategory: "Discord",
+      categories: ["Data Engineering", "Data Science & ML", "Astuces et conseils", "Général"],
+      selectedCategory: "Data Engineering",
     }
   },
   async fetch() {
@@ -27,14 +27,14 @@ export default Vue.extend({
       .fetch()
 
     const discordPosts: Post[] = await this.$content("blog")
-      .where({ tags: { $contains: "discord" } })
+      .where({ etiket: { $contains: "discord" } })
       .sortBy("createdAt", "desc")
       .limit(3)
       .without(["body"])
       .fetch()
 
     const linuxPosts: Post[] = await this.$content("blog")
-      .where({ tags: { $contains: "linux" } })
+      .where({ etiket: { $contains: "linux" } })
       .sortBy("createdAt", "desc")
       .limit(3)
       .without(["body"])
@@ -65,9 +65,9 @@ export default Vue.extend({
     }
   },
   head() {
-    const title = "EGGSY's Blog"
+    const title = "Le Blog de Salomon Dion"
     const description =
-      "EGGSY'nin günlük hayattan, tecrübelerinden bahsettiği, göstermek veya anlatmak istediği şeyleri daha düzenli ve profesyonel bir şekilde tuttuğu blog sayfası."
+      "Le blog de Salomon Dion où il parle de son quotidien, de ses expériences, et de ce qu'il veut montrer ou raconter de manière plus organisée et professionnelle."
 
     return {
       title: "Blog",
@@ -190,7 +190,7 @@ export default Vue.extend({
 <template>
   <div class="pt-6">
     <div v-if="getFilteredPosts === false">
-      <Title> Son gönderiler </Title>
+      <Title> Derniers articles </Title>
 
       <div class="mt-2 grid px-4 gap-4 md:grid-cols-3">
         <template v-if="isFetchPending">
@@ -217,7 +217,7 @@ export default Vue.extend({
               selectedCategory === text && 'bg-gray-100 dark:bg-neutral-800'
             "
             :title="
-              selectedCategory === text ? `Tüm ${text} gönderilirini gör` : ''
+              selectedCategory === text ? `Voir tous les articles dans ${text}` : ''
             "
             @click="
               selectedCategory !== text
@@ -242,7 +242,7 @@ export default Vue.extend({
       </div>
 
       <div class="mt-16">
-        <Title> Tüm gönderiler </Title>
+        <Title> Tous les articles </Title>
 
         <div class="mt-4 grid gap-3 md:grid-cols-3">
           <template v-if="isFetchPending">
@@ -283,20 +283,19 @@ export default Vue.extend({
         <h1
           class="font-semibold px-4 text-2xl text-gray-900 md:text-4xl dark:text-gray-100"
         >
-          Aramanıza uygun herhangi bir gönderi bulunamadı.
+          Aucun article correspondant à votre recherche n'a été trouvé.
         </h1>
 
         <div class="px-4 md:w-4/6">
           <h3 class="text-lg text-gray-900 dark:text-gray-100">
-            Deneyebileceğiniz yöntemler:
+            Méthodes que vous pouvez essayer:
           </h3>
 
           <ul class="list-disc pl-4 text-gray-700 dark:text-gray-300">
-            <li>Aramanızda anahtar kelimeler kullanmayı deneyin.</li>
-            <li>Etiketler kullanmayı deneyin.</li>
+            <li>Essayez d'utiliser des mots clés dans votre recherche.</li>
+            <li>Essayez d'utiliser des tags.</li>
             <li>
-              Gönderinin başlığında veya açıklamasında olan kelimelerle arama
-              yapmayı deneyin.
+              Essayez de rechercher des mots qui se trouvent dans le titre ou la description de l'article.
             </li>
           </ul>
         </div>
@@ -306,12 +305,12 @@ export default Vue.extend({
             <IconHome class="h-6 w-6" />
           </template>
 
-          <span>Bloga Dön</span>
+          <span>Retour au blog</span>
         </Button>
       </div>
 
       <div v-else class="space-y-2 mt-8">
-        <Title>Arama sonuçları:</Title>
+        <Title>Résultats de recherche:</Title>
 
         <div class="space-y-2">
           <CardPost

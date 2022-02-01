@@ -53,11 +53,11 @@ export default Vue.extend({
 
     const title = post.title
     const description =
-      post.description || "EGGSY'nin blogunda bu yazıyı okumaya davet edildin."
+      post.description || "Vous avez été invité à lire cet article sur le blog de Salomon."
 
     const image = getPostImage
     const tags = getTags?.join(", ") || title
-    const href = `https://eggsy.xyz${this.$route?.path}`
+    const href = `https://detygon.com${this.$route?.path}`
 
     return {
       bodyAttrs: {
@@ -75,7 +75,7 @@ export default Vue.extend({
           title,
           description,
           image,
-          keywords: `${tags}, eggsy blog, blog, teknoloji, vue, yazılım, discord, eggsys`,
+          keywords: `${tags}, detygon blog, blog, technologie, data science, data engineering, machine learning, SQL, data`,
           url: href,
         },
         [
@@ -122,8 +122,8 @@ export default Vue.extend({
      */
     getPostImage(): string {
       return this.post?.image
-        ? `https://eggsy.xyz/${this.post?.image}`
-        : `https://eggsy.xyz/assets/images/posts/${this.post?.slug}.jpg`
+        ? `https://detygon.com/${this.post?.image}`
+        : `https://detygon.com/assets/images/posts/${this.post?.slug}.jpg`
     },
   },
 })
@@ -157,7 +157,7 @@ export default Vue.extend({
               "
             >
               <IconClock class="h-4 w-4" />
-              <div>{{ getReadingTime }} dakika okuma</div>
+              <div>{{ getReadingTime }} minutes de lecture</div>
             </div>
 
             <div
@@ -206,17 +206,17 @@ export default Vue.extend({
 
         <Disqus
           :title="post.title"
-          :url="`https://eggsy.xyz/blog/gonderi/${post.slug}`"
-          :identifier="`/blog/gonderi/${post.slug}`"
+          :url="`https://detygon.com/blog/articles/${post.slug}`"
+          :identifier="`/blog/articles/${post.slug}`"
           :slug="post.slug"
-          lang="tr"
+          lang="fr"
           class="mt-10 px-4"
         />
 
         <div class="space-y-12 mt-10 px-4">
           <!-- Related posts -->
           <div v-if="getRelatedPosts.length > 0" class="space-y-2">
-            <Title :padding="false">Benzer İçerikler</Title>
+            <Title :padding="false">Vous pourriez aussi aimé</Title>
 
             <div class="grid gap-4 sm:grid-cols-4">
               <CardPost
@@ -231,14 +231,14 @@ export default Vue.extend({
 
           <!-- Share -->
           <div class="space-y-2">
-            <Title :padding="false">Yazıyı paylaş</Title>
+            <Title :padding="false">Partager la publication</Title>
 
             <BlogShare :title="post.title" :path="$route.path" />
           </div>
 
           <!-- Tags -->
           <div v-if="getTags.length > 0" class="space-y-2">
-            <Title :padding="false" lang="tr">Etiketler</Title>
+            <Title :padding="false" lang="tr">Tags</Title>
 
             <div class="flex flex-wrap space-x-2">
               <Button
@@ -263,7 +263,7 @@ export default Vue.extend({
   </transition>
 </template>
 
-<style >
+<style>
 /* Nuxt Content */
 .nuxt-content {
   /* Headings */
@@ -313,12 +313,12 @@ export default Vue.extend({
     }
 
     code {
-        @apply font-sans bg-blue-100 py-px px-1 text-blue-600 dark:bg-blue-900 dark:bg-opacity-50 dark:text-blue-400;
+      @apply font-sans bg-blue-100 py-px px-1 text-blue-600 dark:bg-blue-900 dark:bg-opacity-50 dark:text-blue-400;
 
-  &::before,
-  &::after {
-    content: "`";
-  }
+      &::before,
+      &::after {
+        content: "`";
+      }
     }
 
     &:not(:last-child) {
@@ -369,12 +369,12 @@ export default Vue.extend({
     }
 
     li code {
-        @apply font-sans bg-blue-100 py-px px-1 text-blue-600 dark:bg-blue-900 dark:bg-opacity-50 dark:text-blue-400;
+      @apply font-sans bg-blue-100 py-px px-1 text-blue-600 dark:bg-blue-900 dark:bg-opacity-50 dark:text-blue-400;
 
-  &::before,
-  &::after {
-    content: "`";
-  }
+      &::before,
+      &::after {
+        content: "`";
+      }
     }
 
     li:not(:last-child) {

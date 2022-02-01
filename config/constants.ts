@@ -1,14 +1,14 @@
 export default {
   social: {
     discord: "https://discord.gg/rpvNmR9cP9",
-    twitter: "https://twitter.com/eggsydev/",
-    github: "https://github.com/eggsy/",
-    instagram: "https://instagram.com/eggsy_dev/",
+    twitter: "https://twitter.com/detygon/",
+    github: "https://github.com/detygon/",
+    instagram: "https://instagram.com/detygon/",
     trello: "https://trello.com/b/XtWZFFiH/",
-    email: "eggsydev@gmail.com",
+    email: "detygon@outlook.com",
   },
   sponsor: {
-    patreon: "https://www.patreon.com/eggsy/",
+    patreon: "https://www.patreon.com/detygon/",
   },
   links: {
     unblockPlease: {

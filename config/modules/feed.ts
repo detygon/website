@@ -1,5 +1,5 @@
 const Feed = () => {
-  const baseUrlArticles = "https://eggsy.xyz/blog"
+  const baseUrlArticles = "https://detygon.com/blog"
 
   const feedFormats = {
     rss: { type: "rss2", file: "rss.xml" },
@@ -10,20 +10,20 @@ const Feed = () => {
 
   const createFeedArticles = async function (feed: any) {
     feed.options = {
-      title: "EGGSY's Blog",
+      title: "Le blog de Salomon Dion",
       description:
-        "EGGSY'nin günlük hayattan, tecrübelerinden bahsettiği, göstermek veya anlatmak istediği şeyleri daha düzenli ve profesyonel bir şekilde tuttuğu blog sayfası.",
+        "Le blog de Salomon Dion où il parle de son quotidien, de ses expériences, et de ce qu'il veut montrer ou raconter de manière plus organisée et professionnelle.",
       link: baseUrlArticles,
     }
 
     const articles = await $content("blog").fetch()
 
     articles.forEach((article: any) => {
-      const url = `${baseUrlArticles}/gonderi/${article.slug}`
+      const url = `${baseUrlArticles}/articles/${article.slug}`
 
       const hostName =
         process.env.NODE_ENV === "production"
-          ? "https://eggsy.xyz"
+          ? "https://detygon.com"
           : "http://localhost:3000"
 
       const postImagesPath = `${hostName}/assets/images/posts`

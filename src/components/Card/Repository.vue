@@ -55,7 +55,7 @@ export default Vue.extend({
     <div class="space-y-2">
       <div :class="top && 'flex justify-between space-x-2'">
         <h3 class="text-gray-700 items-center truncate dark:text-neutral-400">
-          <span class="text-gray-400 dark:text-neutral-700">eggsy/</span
+          <span class="text-gray-400 dark:text-neutral-700">detygon/</span
           >{{ name }}
         </h3>
 
@@ -79,12 +79,12 @@ export default Vue.extend({
       </div>
 
       <div class="flex items-center justify-between">
-        <span>Language:</span>
+        <span>Langue:</span>
         <IconDev :brand="getLanguageIcon" class="h-5 w-5" />
       </div>
 
       <div v-if="license" class="flex items-center justify-between">
-        <span>License:</span>
+        <span>Licence:</span>
         <span>{{ license }}</span>
       </div>
     </div>
