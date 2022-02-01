@@ -1,15 +1,15 @@
-import { Handler } from "@netlify/functions"
 import LastFMTyped from "lastfm-typed"
 
 // Can also be set through Netlify environment variables
 const LASTFM_API_KEY = process.env.LASTFM_API_KEY
 const username = "detygon"
 
-const handler: Handler = async () => {
-  if (!LASTFM_API_KEY)
+export async function onRequest() {
+  if (!LASTFM_API_KEY) {
     return {
       statusCode: 401,
     }
+  }
 
   try {
     const lastFm = new LastFMTyped(LASTFM_API_KEY)
@@ -69,30 +69,23 @@ const handler: Handler = async () => {
     }
 
     // Return
-    return {
-      statusCode: 200,
-      error: false,
-      headers: {
-        "Access-Control-Allow-Origin": origin,
-        "Access-Control-Allow-Headers": "Content-Type",
-        "Access-Control-Allow-Methods": "GET",
-      },
-      body: JSON.stringify({
+    return new Response(
+      JSON.stringify({
         user: formattedUserInfo,
         recentTracks: recentTracks?.tracks?.map(mapTrack) || [],
         topTracks: topTracks?.tracks?.map(mapTrack) || [],
         topArtists: topArtists?.artists?.map(mapArtist) || [],
-      }),
-    }
+      })
+    )
   } catch (error: any) {
     console.log(error)
 
-    return {
-      error: true,
-      statusCode: error.statusCode || 500,
-      message: error.message,
-    }
+    return new Response(
+      JSON.stringify({
+        error: true,
+        statusCode: error.statusCode || 500,
+        message: error.message,
+      })
+    )
   }
 }
-
-export { handler }
