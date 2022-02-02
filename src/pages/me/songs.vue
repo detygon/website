@@ -92,9 +92,8 @@ export default Vue.extend({
                 href="https://last.fm/user/detygon"
                 class="flex-shrink-0"
                 blank
-                >@{{ lastFm.user.name }}</SmartLink
-              >
-
+                >@{{ lastFm.user.name }}
+              </SmartLink>
               <SmartImage
                 :src="lastFm.user.image"
                 class="rounded-full h-6 w-6"
@@ -122,7 +121,6 @@ export default Vue.extend({
                   new Date().getFullYear() -
                   new Date(lastFm.user.registered * 1000).getFullYear()
                 }}
-
                 année(s)
               </div>
 

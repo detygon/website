@@ -34,7 +34,7 @@ export default Vue.extend({
           title: "Ce site web",
           to: "/",
           description:
-            "Mon site web personnel, mon blog, mes objectifs et bien plus encore !",
+            "Mon espace pour partager mes expériences, mes échecs et succès et bien plus encore !",
           icon: "website",
         },
       ] as Project[],
@@ -82,24 +82,24 @@ export default Vue.extend({
               "Vous voulez voir et/ou contribuer à mon code et à mes dépôts publics ?",
             href: "/me/repos",
           },
-          {
-            title: "Objectifs",
-            description:
-              "Vous voulez savoir sur quoi je travaille en ce moment et ce que je ferai à l'avenir ?",
-            href: "/me/goals",
-          },
+          // {
+          //   title: "Objectifs",
+          //   description:
+          //     "Vous voulez savoir sur quoi je travaille en ce moment et ce que je ferai à l'avenir ?",
+          //   href: "/me/goals",
+          // },
           {
             title: "Contact",
             description:
               "Vous avez besoin d'aide pour quoi que ce soit ? Vous voulez entrer en contact avec moi ? Envoyez-moi un message !",
             href: "/me/contact",
           },
-          {
-            title: "Chansons",
-            description:
-              "Vous avez confiance en vos goûts ? Comparez vos chansons et artistes préférés avec les miens !",
-            href: "/me/songs",
-          },
+          // {
+          //   title: "Chansons",
+          //   description:
+          //     "Vous avez confiance en vos goûts ? Comparez vos chansons et artistes préférés avec les miens !",
+          //   href: "/me/songs",
+          // },
         ],
         pages: [
           {
@@ -155,10 +155,10 @@ export default Vue.extend({
           </div>
 
           <p class="text-neutral-500">
-            Salut, je suis Salomon Dion, originaire de Côte d'Ivoire, et je suis
-            un Data Engineer. J'aide à la prise de décision et l'amélioration
-            des performances des entreprises en développant des plateformes de
-            données.
+            Salut ! Je suis Salomon Dion, Data Engineer originaire de Côte
+            d'Ivoire. J'aide à la prise de décision et l'amélioration des
+            performances des entreprises en leur donnant une meilleure
+            visibilité de leurs activités.
           </p>
         </div>
 
@@ -174,7 +174,7 @@ export default Vue.extend({
     </header>
 
     <section id="me" class="my-16">
-      <Title>Me</Title>
+      <Title>Moi</Title>
 
       <div class="mt-4 grid gap-4 md:grid-cols-2">
         <Card

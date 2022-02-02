@@ -8,7 +8,7 @@ export default Vue.extend({
      * @returns {string}
      */
     getLocalizedNotice(): string {
-      return "Ce site open source et disponible sur GitHub."
+      return "" // "Ce site open source et disponible sur GitHub."
     },
   },
 })
