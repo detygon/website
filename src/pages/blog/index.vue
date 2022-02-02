@@ -11,16 +11,11 @@ export default Vue.extend({
       pagination: 0,
       posts: {
         latest: [] as Post[],
-        discord: [] as Post[],
-        linux: [] as Post[],
+        deng: [] as Post[],
+        ml: [] as Post[],
         rest: [] as Post[],
       },
-      categories: [
-        "Data Engineering",
-        "Data Science & ML",
-        "Astuces et conseils",
-        "Général",
-      ],
+      categories: ["Data Engineering", "Machine Learning", "Général"],
       selectedCategory: "Data Engineering",
     }
   },
@@ -31,15 +26,15 @@ export default Vue.extend({
       .without(["body"])
       .fetch()
 
-    const discordPosts: Post[] = await this.$content("blog")
-      .where({ etiket: { $contains: "discord" } })
+    const dengPosts: Post[] = await this.$content("blog")
+      .where({ tags: { $contains: "data engineering" } })
       .sortBy("createdAt", "desc")
       .limit(3)
       .without(["body"])
       .fetch()
 
-    const linuxPosts: Post[] = await this.$content("blog")
-      .where({ etiket: { $contains: "linux" } })
+    const mlPosts: Post[] = await this.$content("blog")
+      .where({ tags: { $contains: "machine learning" } })
       .sortBy("createdAt", "desc")
       .limit(3)
       .without(["body"])
@@ -47,7 +42,7 @@ export default Vue.extend({
 
     let allPosts: Post[] = await this.$content("blog")
       .sortBy("createdAt", "desc")
-      .skip(3)
+      // .skip(3)
       .without(["body"])
       .fetch()
 
@@ -56,21 +51,21 @@ export default Vue.extend({
       const findFilter = (item: Post) => item.slug === post.slug
 
       if (
-        discordPosts.findIndex(findFilter) !== -1 ||
-        linuxPosts.findIndex(findFilter) !== -1
+        dengPosts.findIndex(findFilter) !== -1 ||
+        mlPosts.findIndex(findFilter) !== -1
       )
         allPosts = allPosts.filter((item: Post) => item.slug !== post.slug)
     }
 
     this.posts = {
       latest: latestPosts || [],
-      discord: discordPosts || [],
-      linux: linuxPosts || [],
+      deng: dengPosts || [],
+      ml: mlPosts || [],
       rest: allPosts || [],
     }
   },
   head() {
-    const title = "Le Blog de Salomon Dion"
+    const title = "Le blog de Salomon Dion"
     const description =
       "Le blog de Salomon Dion où il parle de son quotidien, de ses expériences, et de ce qu'il veut montrer ou raconter de manière plus organisée et professionnelle."
 
@@ -86,11 +81,13 @@ export default Vue.extend({
     getCategoryResults(): Post[] {
       const { posts } = this
 
-      const allPosts = posts.rest.concat(posts.discord, posts.linux)
+      const allPosts = posts.rest.concat(posts.deng, posts.ml)
 
       const filtered = allPosts.filter((post: Post) =>
         post?.tags?.includes(this.selectedCategory?.toLowerCase())
       )
+
+      console.log(allPosts)
 
       return [
         ...new Set(
@@ -131,8 +128,8 @@ export default Vue.extend({
       sorgu = sorgu?.toLowerCase()
       etiket = etiket?.toLowerCase()
 
-      const { latest, discord, linux, rest } = this.posts
-      const allPosts = [...latest, ...discord, ...linux, ...rest]
+      const { latest, deng, ml, rest } = this.posts
+      const allPosts = [...latest, ...deng, ...ml, ...rest]
 
       if (etiket)
         return allPosts.filter(
@@ -259,7 +256,7 @@ export default Vue.extend({
           <template v-else>
             <CardPost
               v-for="(post, index) in getPaginatedPosts"
-              :key="`linux-${index}`"
+              :key="`ml-${index}`"
               :post="post"
               type="text-only-title"
             />
@@ -323,7 +320,7 @@ export default Vue.extend({
         <div class="space-y-2">
           <CardPost
             v-for="(post, index) in getFilteredPosts"
-            :key="`linux-${index}`"
+            :key="`ml-${index}`"
             :post="post"
             type="text"
           />

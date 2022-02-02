@@ -54,7 +54,7 @@ export default Vue.extend({
     const title = post.title
     const description =
       post.description ||
-      "Vous avez été invité à lire cet article sur le blog de Salomon."
+      "Vous avez été invité à lire cet article sur le blog de Salomon Dion."
 
     const image = getPostImage
     const tags = getTags?.join(", ") || title
