@@ -79,7 +79,7 @@ export default Vue.extend({
       </div>
 
       <div class="flex items-center justify-between">
-        <span>Langue:</span>
+        <span>Technologies:</span>
         <IconDev :brand="getLanguageIcon" class="h-5 w-5" />
       </div>
 

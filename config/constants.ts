@@ -1,11 +1,11 @@
 export default {
   social: {
-    discord: "https://discord.gg/rpvNmR9cP9",
+    discord: "https://discord.gg/yzkNyPSF6s",
     twitter: "https://twitter.com/detygon/",
     github: "https://github.com/detygon/",
-    instagram: "https://instagram.com/detygon/",
-    trello: "https://trello.com/b/XtWZFFiH/",
-    email: "detygon@outlook.com",
+    instagram: "https://instagram.com/mr_diddx/",
+    trello: "https://trello.com/b/2D3g57Zw",
+    email: "contact@detygon.com",
   },
   sponsor: {
     patreon: "https://www.patreon.com/detygon/",

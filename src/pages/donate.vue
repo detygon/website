@@ -9,9 +9,16 @@ export default Vue.extend({
     return {
       accounts: [
         {
-          image: "https://i.vgy.me/QJNSYE.png",
+          image:
+            "https://i0.wp.com/afrilandfirstbankci.com/wp-content/uploads/2021/06/grenier-afriland-ci.png",
           name: "Afriland First Bank",
           iban: "OMFNCIABXXX 009831900301",
+          revealed: false,
+        },
+        {
+          image: "https://www.orange.ci/2/menu_resources/uploads/logo_1.png",
+          name: "Orange Money",
+          iban: "(+225) 0768069493",
           revealed: false,
         },
       ],
