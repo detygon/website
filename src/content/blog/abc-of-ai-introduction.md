@@ -1,6 +1,6 @@
 ---
-title: "L'IA pour les humains: Introduction"
-header: /assets/images/posts/ai-for-humans-introduction.jpg
+title: "L'ABC de l'IA: Introduction"
+header: /assets/images/posts/abc-of-ai-introduction.jpg
 tags:
   - machine learning
 ---
@@ -9,7 +9,7 @@ Les données représentent le fondement et le carburant de l'IA. Pour mieux comp
 
 ## Mise en situation
 
-<smart-image src="/assets/images/posts/construction-1.jpg"></smart-image>
+<smart-image src="/assets/images/posts/abc-of-ai-construction-1.jpg"></smart-image>
 
 Imaginez que vous vous promenez et que vous passez devant la façade d’un batiment en construction comme l'image ci-dessus avec le panneau "Bientôt ouvert" . Vous êtes un amateur de mode et vous êtes toujours à l'affût de nouveaux endroits pour l’achat de vos accessoires. Vous ne pouvez donc pas vous empêcher de vous demander : "S'agira-t-il d'une boutique de mode ou d’un restaurant?" Posons cette question de manière plus formelle : **Pensez-vous que le nouveau batiment sera une boutique de mode ou un restaurant**?
 
@@ -21,13 +21,13 @@ Si ce scénario se produisait dans la vie réelle, vous auriez une assez bonne i
 
 > Première leçon: Pour prendre des décisions éclairées, il faut des données.
 
-<smart-image src="/assets/images/posts/ai-for-humans-introduction-map-1.png"></smart-image>
+<smart-image src="/assets/images/posts/abc-of-ai-introduction-map-1.png"></smart-image>
 
 Regardez maintenant les données sur cette image. Le nouveau restaurant est marqué d'un X, les point jaunes indiquent des restaurants (R) et les bleus des boutiques (B). Que devineriez-vous cette fois-ci ? La plupart des gens devinent (R) parce que la plupart des batiments environnants sont également des restaurants (R). Mais remarquez qu'il y a aussi plusieurs boutiques près de l'endroit. Si nous vous demandions d'évaluer votre confiance dans votre prédiction entre 0 et 100, nous nous attendrions à ce qu'elle soit élevée, mais pas à 100. Il est tout à fait possible qu'une autre boutique s'installe dans le quartier.
 
 > Deuxième leçon: Les prédictions ne doivent jamais être sûres à 100%.
 
-<smart-image src="/assets/images/posts/ai-for-humans-introduction-map-2.png"></smart-image>
+<smart-image src="/assets/images/posts/abc-of-ai-introduction-map-2.png"></smart-image>
 
 Ensuite, regardez les données sur cette image. Cette zone comprend plusieurs centres commerciaux et plusieurs boutiques. Si on vous demandait de prédire la nature du nouveau batiment, la majorité repondront boutique (B). Mais il est tout à fait aussi possible que quelqu'un choisisse (R), cela met en évidence plusieurs leçons importantes.
 
