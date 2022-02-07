@@ -201,7 +201,10 @@ export default Vue.extend({
               <BlogReadingIndicator selector=".nuxt-content" />
             </div>
 
-            <NuxtContent :document="post" />
+            <NuxtContent
+              class="prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto"
+              :document="post"
+            />
           </div>
         </article>
 

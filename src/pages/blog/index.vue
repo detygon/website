@@ -16,7 +16,7 @@ export default Vue.extend({
         rest: [] as Post[],
       },
       categories: ["Data Engineering", "Machine Learning", "Général"],
-      selectedCategory: "Data Engineering",
+      selectedCategory: "Machine Learning",
     }
   },
   async fetch() {
@@ -42,7 +42,7 @@ export default Vue.extend({
 
     let allPosts: Post[] = await this.$content("blog")
       .sortBy("createdAt", "desc")
-      // .skip(3)
+      .skip(3)
       .without(["body"])
       .fetch()
 
